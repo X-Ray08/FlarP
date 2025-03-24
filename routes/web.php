@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\hcontroller;
 use App\Http\Controllers\Math;
+use App\Http\Controllers\SignUp;
+use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
 /*Route::get('/', function () {
@@ -52,3 +54,5 @@ route::get('/index',[hcontroller::class,'index']);
 route::view('/indexx','index')->name('index');
 
 route::view('/button','Shared.Buttons')->name('Buttons');
+route::get('/signup',[SignUp::class,'create']);
+route::get('/login',[login::class,'create']);
