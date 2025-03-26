@@ -1,13 +1,17 @@
+@props(['title'=>''])
 
-<x-baselayout>
-@include('layout.partials.header')
+
+<x-baselayout :$title >
+
+<x-layouts.header/>
+
 {{$slot}}
 
-
-  <a href="#">link 1></a>
-  <a href="#">link 2></a>
-   
-  @show
+  <footer>
+   <a href="#">link 1></a>
+   <a href="#">link 2></a>
+   {{$footerlinks}}
+  
     </footer>
 
 </x-baselayout>

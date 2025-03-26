@@ -1,4 +1,4 @@
-<x-applayout>
+<x-applayout title="Home Page" , footerlinks="">
 
 @php
 $color='red';
@@ -673,13 +673,14 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 <!--/ New Cars -->
 </main>
 
-@section('footerlinks')
-{{-- parent forces to show both --}}
-@parent
-<a href="#">link 3></a>
-<a href="#">link 4></a>
-
-@endsection
+ 
+  
+    <x-slot:footerlinks>
+      <a href="#">link 3></a>
+      <a href="#">link 4></a>
+    </x-slot:footerlinks>
+   
+  
 </x-applayout>
 
  
