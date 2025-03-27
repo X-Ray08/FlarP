@@ -54,5 +54,5 @@ route::get('/index',[hcontroller::class,'index']);
 route::view('/indexx','index')->name('index');
 
 route::view('/button','Shared.Buttons')->name('Buttons');
-route::get('/signup',[SignUp::class,'create']);
-route::get('/login',[login::class,'create']);
+route::get('/signup',[SignUp::class,'create'])->name('signup');
+route::get('/login',[login::class,'create'])->name('login');

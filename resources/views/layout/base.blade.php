@@ -1,6 +1,4 @@
 @props(['bodyClass'=>'','title'=>''])
-
-
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale()}}">
   <head>
