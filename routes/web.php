@@ -7,6 +7,7 @@ use App\Http\Controllers\Math;
 use App\Http\Controllers\SignUp;
 use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\carController;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -21,7 +22,7 @@ Route::get('/about', function () {
     //dd($person);
     return view('ray');
 });
-Route::view('/', 'welcome')->name('welcome');
+Route::view('/', 'index')->name('index');
 
 route::get('/product/{id?}', function (string $id= null) {
     return ("Prudoct ID=$id");
@@ -54,5 +55,9 @@ route::get('/index',[hcontroller::class,'index']);
 route::view('/indexx','index')->name('index');
 
 route::view('/button','Shared.Buttons')->name('Buttons');
+
+route::get('/car/search',[carController::class,'search'])->name('car.search');
+route::resource('car' ,carController::class);
+
 route::get('/signup',[SignUp::class,'create'])->name('signup');
 route::get('/login',[login::class,'create'])->name('login');
